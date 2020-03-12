@@ -1,0 +1,17 @@
+{
+  "name": "ufpb",
+  "version": "1.0.0",
+  "description": "This is a simple and beautiful leech API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kewyn Akshlley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}
