@@ -13,5 +13,11 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@babel/compat-data": "^7.9.0"
   }
 }

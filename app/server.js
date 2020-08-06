@@ -2,7 +2,7 @@ import http from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cluster from 'cluster';
-import "regenerator-runtime/runtime";
+import regeneratorRuntime from "regenerator-runtime";
 
 const app = express();
 let workers = [];
@@ -82,10 +82,14 @@ function worker_online_log() {
 
 async function init() {
   console.log(1);
-  await sleep(500);
+  while(true){
+    await sleep(500);
+    break;
+  }
+
 }
 function sleep(ms) {
-  return new Promise((resolve) => {
+  new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
 }
