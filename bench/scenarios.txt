@@ -1,0 +1,2 @@
+# variar "-c" de 1 a 10.
+hey -z 10m -c 1 -q 2 -m GET -T “application/x-www-form-urlencoded” http://35.188.68.8/sort/100000
