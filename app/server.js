@@ -45,6 +45,13 @@ const configExpress = () => {
     return res.status(200).send('Ok')
   });
 
+  app.get('/sort/:value', async (req, res) => {
+    var valueToSort = req.params.value;
+    var max = sort(valueToSort);
+    res.statusText = 'Request completed'
+    return res.json({maxValue : max});
+  });
+
 };
 
 /**
@@ -94,18 +101,8 @@ function sleep(ms) {
   });
 }
 
-setupServer(true);
-
-
-
-export { app };
-
-
-
-
-/*
-app.get('/sort/:sortValue', async (req, res) => {
-  var aux = req.params.sortValue;
+function sort(value) {
+  var aux = value;
   let array = [];
   function getRandom(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -121,5 +118,12 @@ app.get('/sort/:sortValue', async (req, res) => {
       max = Number(array[len]);
     }
   }
-  res.json({maxValue : max});
-}); */
+  return max;
+};
+
+setupServer(true);
+
+
+
+export { app };
+

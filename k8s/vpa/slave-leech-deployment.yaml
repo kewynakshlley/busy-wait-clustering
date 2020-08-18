@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: slave-leech-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: slave-leech-deployment
@@ -20,5 +20,8 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            cpu: 50m
+            cpu: 100m
+            memory: 50Mi
+          limits:
+            cpu: 100m
             memory: 50Mi
