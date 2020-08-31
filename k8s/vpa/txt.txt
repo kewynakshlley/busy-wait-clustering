@@ -1,0 +1,85 @@
+{
+   "status" : "success",
+   "data" : {
+      "resultType" : "vector",
+      "result" : [
+         {
+            "metric" : {
+               "__name__" : "ALERTS",
+               "alertstate" : "firing",
+               "alertname" : "Watchdog",
+               "severity" : "none"
+            },
+            "value" : [
+               1598645224.119,
+               "1"
+            ]
+         },
+         {
+            "value" : [
+               1598645224.119,
+               "1"
+            ],
+            "metric" : {
+               "alertstate" : "firing",
+               "__name__" : "ALERTS",
+               "job" : "kube-etcd",
+               "alertname" : "etcdMembersDown",
+               "severity" : "critical"
+            }
+         },
+         {
+            "metric" : {
+               "alertstate" : "firing",
+               "__name__" : "ALERTS",
+               "severity" : "critical",
+               "alertname" : "etcdInsufficientMembers",
+               "job" : "kube-etcd"
+            },
+            "value" : [
+               1598645224.119,
+               "1"
+            ]
+         },
+         {
+            "metric" : {
+               "__name__" : "ALERTS",
+               "alertstate" : "firing",
+               "alertname" : "KubeCPUOvercommit",
+               "severity" : "warning"
+            },
+            "value" : [
+               1598645224.119,
+               "1"
+            ]
+         },
+         {
+            "metric" : {
+               "__name__" : "ALERTS",
+               "alertstate" : "firing",
+               "alertname" : "KubeMemoryOvercommit",
+               "severity" : "warning"
+            },
+            "value" : [
+               1598645224.119,
+               "1"
+            ]
+         },
+         {
+            "metric" : {
+               "namespace" : "kube-system",
+               "__name__" : "ALERTS",
+               "alertstate" : "firing",
+               "alertname" : "TargetDown",
+               "job" : "kube-etcd",
+               "service" : "prom-operator-prometheus-o-kube-etcd",
+               "severity" : "warning"
+            },
+            "value" : [
+               1598645224.119,
+               "1"
+            ]
+         }
+      ]
+   }
+}

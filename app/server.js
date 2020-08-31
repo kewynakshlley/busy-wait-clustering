@@ -45,6 +45,13 @@ const configExpress = () => {
     return res.status(200).send('Ok')
   });
 
+  app.get('/busy-wait/:time', async (req, res) => {
+    var time = req.params.time;
+    busyWait(time);
+    res.statusText = 'Request completed'
+    return res.status(200).send('Ok')
+  });
+
   app.get('/sort/:value', async (req, res) => {
     var valueToSort = req.params.value;
     var max = sort(valueToSort);
@@ -79,6 +86,17 @@ function worker_exit_log() {
     });
 
   });
+}
+
+function busyWait(time) {
+  var start = new Date();
+  var now;
+  while (true) {
+      now = new Date();
+      if (now - start >= time) {
+          break;
+      }
+  }
 }
 
 function worker_online_log() {
