@@ -37,8 +37,8 @@ Remember that you need to install Hey.
 * [npm](https://www.npmjs.com/) - Dependency Management
 * [Expressjs](https://expressjs.com/) - Nodejs web application framework
 * [Nodejs](https://nodejs.org/en/) - Client-side framework used
-* [Kubernetes] (https://kubernetes.io/) - Container orchestrator used
-* [Minikube] (https://kubernetes.io/docs/setup/learning-environment/minikube/) - Cluster creation.
+* [Kubernetes](https://kubernetes.io/) - Container orchestrator used
+* [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) - Cluster creation.
 
 
 
