@@ -39,24 +39,11 @@ const configExpress = () => {
     res.json({ health: 'UP' });
   })
 
-  app.get('/call', async (req, res) => {
-    init();
-    res.statusText = 'Request completed'
-    return res.status(200).send('Ok')
-  });
-
   app.get('/busy-wait/:time', async (req, res) => {
     var time = req.params.time;
     busyWait(time);
     res.statusText = 'Request completed'
     return res.status(200).send('Ok')
-  });
-
-  app.get('/sort/:value', async (req, res) => {
-    var valueToSort = req.params.value;
-    var max = sort(valueToSort);
-    res.statusText = 'Request completed'
-    return res.json({maxValue : max});
   });
 
 };
@@ -104,40 +91,6 @@ function worker_online_log() {
     console.log('Worker ' + worker.process.pid + ' is online');
   });
 }
-
-async function init() {
-  console.log(1);
-  while(true){
-    await sleep(500);
-    break;
-  }
-
-}
-function sleep(ms) {
-  new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
-function sort(value) {
-  var aux = value;
-  let array = [];
-  function getRandom(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  for (let i = 0 ; i < aux ; i++){
-    array.push(getRandom(1, aux));
-  }
-
-  var len = array.length, max = -Infinity;
-  while (len--) {
-    if (Number(array[len]) > max) {
-      max = Number(array[len]);
-    }
-  }
-  return max;
-};
 
 setupServer(true);
 
