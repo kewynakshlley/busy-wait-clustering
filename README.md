@@ -1,4 +1,4 @@
-# slave-leech
+# busy-wait-clustering
 
 
 Simple API used to receive workload from a benchmark tool. By using this API combined with [Hey](https://github.com/rakyll/hey) is possible to determine the percentage of CPU usage that you want to achieve (50%, 200%..). These technologies combined are used to test the kubernetes autoscaling features (horizontal and vertical) and analyze in which cenarios each approach is better. I pretend to launch an article about this soon. 
